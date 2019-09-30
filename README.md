@@ -37,7 +37,7 @@ vue create v-blog
 ## 增加组件
 ### 创建登录页面组件 login/index.vue
 ### 创建主页组件 home/index.vue
-### 配置路由映射 router/router.js 
+### 配置路由映射 index/index.js
 ### 测试路由 App.vue
 tag：0.0.1
 ### 修改登录页面组件
@@ -51,15 +51,15 @@ import 'normalize.css/normalize.css'
 npm install --save nprogress
 使用
 //导入
-在router/router.js中添加
+在router/index.js中添加
 import NProgress from 'nprogress'
 import 'nprogress/nprogress.css'
-router.beforeEach((to, from, next) => {
+index.beforeEach((to, from, next) => {
   NProgress.start()
   next()
 })
 
-router.afterEach(() => {
+index.afterEach(() => {
   NProgress.done()
 })
 进阶-自定义颜色
@@ -80,9 +80,26 @@ npm install --save-dev node-sass
 npm install --save-dev sass-loader
 修改login/index.vue
     添加登录表单及相关事件
-修改store/store.js
+修改store/index.js
     增加state属性isLogin，记录是否登录，未登录跳转登录页面，登录以后不拦截
-修改router/router.js
-    增加全局导航守卫beforeEach，每次路由跳转时验证是否登录
+修改router/index.js    增加全局导航守卫beforeEach，每次路由跳转时验证是否登录
 
 
+npm install js-cookie --save
+npm install screenfull
+npm install axios
+npm install fuse.js
+//使用图标
+npm install svg-sprite-loader --save-dev
+
+npm install driver.js --save
+
+npm install path-to-regexp
+
+
+npm install mavon-editor --save
+npm i marked -S
+
+npm install vue-quill-editor --save
+
+npm i --save lodash
